@@ -90,7 +90,7 @@ public class CardOrderTest {
     }
 
     @Test
-    void shouldTestEmptyNameCardOrder() {
+    void testNameNotFilledIn() {
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79999999999");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.className("button")).click();
@@ -102,7 +102,7 @@ public class CardOrderTest {
     }
 
     @Test
-    void shouldTestEmptyPhoneCardOrder() {
+    void testNotFilledOutPhone() {
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Анна Петрова");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.className("button")).click();
